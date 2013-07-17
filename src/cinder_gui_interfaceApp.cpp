@@ -1,10 +1,4 @@
 #include "cinder/app/AppNative.h"
-//#include "cinder/gl/gl.h"
-//#include "cinder/gl/Texture.h"
-//#include "cinder/Timeline.h"
-//#include "TuioClient.h"
-//#include "cinder/Text.h"
-//#include "NavigationObject.h"
 #include "NavigationBarObject.h"
 
 using namespace ci;
@@ -12,7 +6,7 @@ using namespace ci::app;
 using namespace std;
 
 
-class guiObjectsApp : public AppBasic {
+class cinder_gui_interfaceApp : public AppBasic {
 public:
     void prepareSettings( Settings *settings );
 	void setup();
@@ -30,13 +24,13 @@ public:
 };
 
 
-void guiObjectsApp::prepareSettings( Settings *settings )
+void cinder_gui_interfaceApp::prepareSettings( Settings *settings )
 {
 	settings->enableMultiTouch();
     settings->setWindowSize( 800, 800 );
 }
 
-void guiObjectsApp::setup()
+void cinder_gui_interfaceApp::setup()
 {
     mTuio.connect();
     
@@ -47,30 +41,30 @@ void guiObjectsApp::setup()
     guiObject.setContainerColor(ColorA(1.0f,0.0f,0.0f,1.0f));
     guiObject.setText("BTN 0");
     
-    guiObject.addCallBack(bind(&guiObjectsApp::buttonCallback,this,std::__1::placeholders::_1));
+    guiObject.addCallBack(bind(&cinder_gui_interfaceApp::buttonCallback,this,std::__1::placeholders::_1));
     
     
     guiObject1.setup(getWindow(),&mTuio);
     guiObject1.setPositon(Vec2f(600,600));
     guiObject1.setSize(Vec2f(100,100));
     
-    guiObject1.addCallBack(bind(&guiObjectsApp::buttonCallback,this,std::__1::placeholders::_1));
+    guiObject1.addCallBack(bind(&cinder_gui_interfaceApp::buttonCallback,this,std::__1::placeholders::_1));
     guiObject1.setContainerColor(ColorA(0.0f,1.0f,0.0f,1.0f));
     guiObject1.setText("BTN 1");
     
     
-    navigationBarObject.setup(getWindow(),&mTuio,3,Rectf(10,0,getWindowWidth()-10,50) ,bind(&guiObjectsApp::buttonCallback,this,std::__1::placeholders::_1));
+    navigationBarObject.setup(getWindow(),&mTuio,3,Rectf(10,0,getWindowWidth()-10,50) ,bind(&cinder_gui_interfaceApp::buttonCallback,this,std::__1::placeholders::_1));
     
     contentArea = Rectf(100,100,getWindowWidth()-50,getWindowHeight()-100);
     contentAreaColor = ColorA(1.0f, 1.0f, 1.0f, 0.5f);
 }
 
 
-void guiObjectsApp::update()
+void cinder_gui_interfaceApp::update()
 {
 }
 
-void guiObjectsApp::draw()
+void cinder_gui_interfaceApp::draw()
 {
 	// clear out the window with black
 	gl::clear( Color( 0, 0, 0 ) );
@@ -99,11 +93,11 @@ void guiObjectsApp::draw()
     
 }
 
-void guiObjectsApp::buttonCallback(GuiObject *o){
+void cinder_gui_interfaceApp::buttonCallback(GuiObject *o){
     console()<<"BUTTON  "<< o->getText()<<"Has been selected"<<endl;
     contentAreaColor =o->getContainerColor()/2;
 }
 
 
 
-CINDER_APP_NATIVE( guiObjectsApp, RendererGl )
+CINDER_APP_NATIVE( cinder_gui_interfaceApp, RendererGl )

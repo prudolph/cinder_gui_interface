@@ -10,7 +10,7 @@
 
 #include "GuiObject.h"
 #include "cinder/gl/gl.h"
-//#include "cinder/Rand.h"
+
 
 using namespace std;
 using namespace ci::app;
@@ -153,8 +153,7 @@ vector<TouchEvent::Touch> GuiObject::getMouseTouches(){
 
 #pragma mark Touch Functions
 void GuiObject::touchesBegan(app::TouchEvent event){
-  
-    gl::getViewport();
+ 
 #ifdef INPUT_DEBUG
     console()<<"Touches Began Event:: "<< event<<endl;
 #endif
