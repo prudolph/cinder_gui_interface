@@ -12,7 +12,7 @@ using namespace std;
 NavigationObject::NavigationObject(){
     console()<<"CREATED AN INTERFACE OBJECT"<<endl;
     oCanMove=false;
-
+    
   }
 
 

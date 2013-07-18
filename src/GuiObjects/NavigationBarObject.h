@@ -13,17 +13,22 @@
 
 using namespace std;
 
-class NavigationBarObject{
+class NavigationBarObject:GuiObject{
     
-    public:
-        NavigationBarObject();
-    void setup(ci::app::WindowRef window,tuio::Client *tuio, int numItems,Rectf containerRect, boost::function<void(GuiObject*)> fn);
+public:
+    NavigationBarObject();
+    void setup(ci::app::WindowRef window,tuio::Client *tuio,Rectf containerRect, boost::function<void(GuiObject*)> fn);
     void draw();
-    void navButtonSelected(GuiObject *selectedObject);
+    void addChild(GuiObject* o);
     
-    int nbNumObjects;
+    void navButtonSelected(GuiObject *selectedObject);
+    void organizeChildren();
+
     float nbBufferSz;
     Rectf nbContainer;
     ColorA nbContainerColor;
-    vector<GuiObject*> navigationBarObjects;
+    
+protected:
+    vector<GuiObject*> nbChildren;
+
 };

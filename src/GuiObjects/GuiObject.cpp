@@ -10,7 +10,7 @@
 
 #include "GuiObject.h"
 #include "cinder/gl/gl.h"
-
+#include "boost/lexical_cast.hpp"
 
 using namespace std;
 using namespace ci::app;
@@ -30,26 +30,21 @@ struct FindTouch {
 
 vector<GuiObject*>GuiObject::objectOrderList = vector<GuiObject*>();
 vector <TouchEvent::Touch> GuiObject::mouseTouches = vector<TouchEvent::Touch>();
+
+
 GuiObject::GuiObject(){
     oCenter=Vec2f(0,0);
     oContainerColor = ColorA(1.0f,0.0f,0.0f,1.0f);
     oContainer= Rectf( Vec2f( 0, 0 ), Vec2f( 10, 10 ) );
 
-    oCanMove=oCanRotate=oCanResize=oIsEnabled=oIsVisible=true;
-     oSelected=false;
+    oIsAcceptingTouches=oCanMove=oCanRotate=oCanResize=oIsEnabled=oIsVisible=true;
+    oHit=oSelected=false;
     oTextFont="Arial";
     oStyle = NORMAL;
-    
+
     objectOrderList.push_back(this);
 }
 
-void GuiObject:: setup(ci::app::WindowRef window,tuio::Client *tuio){
-    oWindow = window;
-    oTuioClient = tuio;
-    registerInputCallBacks();
-    
-
-   }
 
 
 void GuiObject::draw(){
@@ -61,28 +56,42 @@ void GuiObject::draw(){
         GuiObject *object = (GuiObject*)*it;
    
         if(object->oIsVisible){
-            if(object->oSelected){
-                gl::color(0.0f,1.0f,1.0f);
-                gl::lineWidth(5.0f);
+
+            if(object->isSelected()){
+                gl::color(1.0f,0.0f,0.0f);
+                gl::lineWidth(8.0f);
+              gl::drawStrokedRect(object->oContainer);
+            }
+            
+            if(object->isHit()){
+                gl::color(0.0f,0.0f,1.0f);
+                gl::lineWidth(4.0f);
                 gl::drawStrokedRect(object->oContainer);
             }
+             
+            
                 gl::color(object->oContainerColor);
                 gl::drawSolidRect(object->oContainer);
         }
         
         //draw gui object text
+        object->updateTextBox();
         gl::enableAlphaBlending();
         Vec2f textboxPos= Vec2f(object->oContainer.getCenter().x-object->oTextTexture.getWidth()/2,
                                 object->oContainer.getCenter().y-object->oTextTexture.getHeight()/2);
         gl::draw(object->oTextTexture,textboxPos);
         gl::disableAlphaBlending();
     
+
     }
 }
 
 
-void GuiObject::registerInputCallBacks(){
-      
+void GuiObject::registerForInput(ci::app::WindowRef window, tuio::Client *tuio){
+    oWindow = window;
+    oTuioClient = tuio;
+    
+    
     oCbMouseDown = oWindow->getSignalMouseDown().connect(std::bind( &GuiObject::onMouseBegan, this, std::_1 ) );
 	oCbMouseDrag = oWindow->getSignalMouseDrag().connect( std::bind( &GuiObject::onMouseMoved, this, std::_1 ) );
     oCBMouseEnd  = oWindow->getSignalMouseUp()  .connect( std::bind( &GuiObject::onMouseEnded, this, std::_1 ) );
@@ -159,8 +168,12 @@ void GuiObject::touchesBegan(app::TouchEvent event){
 #endif
     
         for( vector<TouchEvent::Touch>::iterator touchIt = event.getTouches().begin(); touchIt != event.getTouches().end(); ++touchIt ) {
-
-            if( oContainer.contains( touchIt->getPos()) && objectOrderList.at(getTopMostObject(touchIt->getPos())) == this && !isSelected()){
+            if( oContainer.contains( touchIt->getPos())) setHit(true);
+            
+            //if this object contains the point and this is the object on the top
+            if( oContainer.contains( touchIt->getPos()) &&// does this object contain the touch point
+               objectOrderList.at(getTopMostObject(touchIt->getPos())) == this && //is the topmost object and the current object the same
+               !isSelected()){
                 currentObjTouches.push_back(*touchIt);
                   event.setHandled( true );
                 }
@@ -168,7 +181,9 @@ void GuiObject::touchesBegan(app::TouchEvent event){
     
     if(currentObjTouches.size()>0){
         setSelected(true);
-        oSelectedSignal(this);//Fire off Signal
+        oOnSelectSignal(this);//Fire off Signal
+       
+    
     }
 
 }
@@ -212,7 +227,11 @@ void GuiObject::touchesEnded(app::TouchEvent event){
     
     
         for( vector<TouchEvent::Touch>::const_iterator touchIt = event.getTouches().begin(); touchIt != event.getTouches().end(); ++touchIt ) {
-        
+            
+            if(oContainer.contains(touchIt->getPos())){
+                setHit(false);
+            }
+            
             //if current touches vector contains the iterators touch id, remove it from the list, since it is no longer touching the object. If there are no more touches in the current object touches set then the object is no longer selected
 
             auto found=std::find_if (currentObjTouches.begin(),currentObjTouches.end(), FindTouch(*touchIt));
@@ -221,14 +240,12 @@ void GuiObject::touchesEnded(app::TouchEvent event){
             if(found!=currentObjTouches.end()) currentObjTouches.erase(found);
         }
         
-        if(currentObjTouches.size()==0)  setSelected(false);
-
+   
+    
 }
 
 TouchEvent GuiObject::mouse2Touch(MouseEvent e){
     app::TouchEvent::Touch t = app::TouchEvent::Touch( e.getPos(), Vec2f(), -1, app::getElapsedSeconds() , nullptr );
-    
-    
     vector<app::TouchEvent::Touch> tVector;
     tVector.push_back(t);
     app::TouchEvent te= TouchEvent(e.getWindow(),tVector );
@@ -249,6 +266,8 @@ int GuiObject::getTopMostObject(Vec2f pos){
     
     return -1;
 }
+
+
  void GuiObject::setSelected(bool t,bool force){
         //update object order - put the clicked button at the top of the list
      if(t){
@@ -272,12 +291,15 @@ int GuiObject::getTopMostObject(Vec2f pos){
      }
      
      if(force)oSelected = t;
-     
-  
-     
-     
     }
 
+
+void GuiObject::setHit(bool t){
+    string state = t?"HIT":"NOT HIT" ;
+        console()<<getText() <<"  "<<state <<endl;
+    
+    oHit = t;
+}
 
 
 #pragma mark - Object Positioning functions
@@ -298,13 +320,21 @@ void GuiObject::setSize(Vec2f size){
 
 
 void GuiObject::setText(string s){
+
     oText = s;
-    console()<<"SET Text "<< oText<<endl;
-    oTextBox = TextBox().alignment( TextBox::CENTER ).font( Font(oTextFont,18) ).size( Vec2f(oContainer.getWidth(), TextBox::GROW) ).text( oText );
+    string countLabel = "\n " + boost::lexical_cast<string>(currentObjTouches.size());
+    oTextBox = TextBox().alignment( TextBox::CENTER ).font( Font(oTextFont,18) ).size( Vec2f(oContainer.getWidth(), TextBox::GROW) ).text( oText+ countLabel );
     oTextBox.setColor( ColorA( 0.0f, 0.0f, 0.0f, 1.0f ) );
 	oTextBox.setBackgroundColor( ColorA( 0, 0, 0, 0.0f ) );
 	oTextTexture = gl::Texture( oTextBox.render() );
 }
 
+void GuiObject::updateTextBox(){
 
 
+
+    string countLabel = "\n" + boost::lexical_cast<string>(currentObjTouches.size());
+        oTextBox.setText(oText+ countLabel );
+
+    oTextTexture = gl::Texture( oTextBox.render() );
+}

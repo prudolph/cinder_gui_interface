@@ -32,14 +32,16 @@ public:
     
     
     GuiObject();
-    void setup(ci::app::WindowRef window, tuio::Client *tuio=NULL);
+  
     static void draw();
     static vector<TouchEvent::Touch> getMouseTouches();
     
     //Callback Functions
-    void    registerInputCallBacks();
-    signal<void(GuiObject *)>&	getSelectedSignal() { return oSelectedSignal; }
-    void addCallBack(boost::function<void(GuiObject*)> fn){oSelectedSignal.connect(fn);};
+    
+    void registerForInput(ci::app::WindowRef window, tuio::Client *tuio=NULL);
+    
+    signal<void(GuiObject *)>&	getSelectedSignal() { return oOnSelectSignal; }
+    void addCallBack(boost::function<void(GuiObject*)> fn){oOnSelectSignal.connect(fn);};
     virtual void onMouseBegan(MouseEvent &e);
     virtual void onMouseMoved(MouseEvent &e);
     virtual void onMouseEnded(MouseEvent &e);
@@ -51,6 +53,9 @@ public:
     TouchEvent mouse2Touch(MouseEvent e);
     virtual void setSelected(bool t, bool force =false);
     bool isSelected(){return oSelected;};
+
+    virtual void setHit(bool t);
+    bool isHit(){return oHit;}
     
     void setInputStyle(InputStyle inStyle){oStyle=inStyle;};
     
@@ -58,16 +63,17 @@ public:
     void setPositon(Vec2f pos);
     void rePosition(Vec2f pos);
     void setSize(Vec2f size);
- 
+    Vec2f getSize(){return oContainer.getSize();};
     void setContainerColor(ColorA clr){ oContainerColor = clr;};
     ColorA getContainerColor(){return oContainerColor;};
     void setVisible(bool v = true){oIsVisible=v;}
 
-
     
     //Text FUnctions
     void setText(string s);
+    void updateTextBox();
     string getText(){return oText;};
+    
 
     static vector<GuiObject*>objectOrderList;
     int getTopMostObject(Vec2f pos);
@@ -85,7 +91,7 @@ protected:
     Rectf oTextRect;
     
     
-    bool oCanMove,oCanRotate,oCanResize,oIsEnabled,oIsVisible,oSelected;
+    bool oCanMove,oCanRotate,oCanResize,oIsEnabled,oIsVisible,oIsAcceptingTouches,oSelected,oHit;
     ColorA oContainerColor;
     
     ci::app::WindowRef				oWindow;
@@ -104,13 +110,12 @@ protected:
    std::vector<TouchEvent::Touch> currentObjTouches;
 
 private:
-    signal<void(GuiObject *)> oSelectedSignal;
-    
-    
+
+    signal<void(GuiObject *)> oOnSelectSignal,oOnHitSignal;
     static   std::vector<TouchEvent::Touch> mouseTouches;
 
-
     
+
 
     
 };

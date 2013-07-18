@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../../../cinder_0.8.5_mac/blocks/OSC/src/OscListener.cpp \
+  /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/OscListener.cpp \
   ../../../cinder_0.8.5_mac/include/cinder/Utilities.h \
   ../../../cinder_0.8.5_mac/boost/boost/lexical_cast.hpp \
   ../../../cinder_0.8.5_mac/boost/boost/detail/lcast_precision.hpp \
@@ -114,14 +114,14 @@ dependencies: \
   ../../../cinder_0.8.5_mac/boost/boost/math/special_functions/fpclassify.hpp \
   ../../../cinder_0.8.5_mac/boost/boost/math/tools/real_cast.hpp \
   ../../../cinder_0.8.5_mac/boost/boost/container/container_fwd.hpp \
-  ../../../cinder_0.8.5_mac/blocks/OSC/src/OscListener.h \
-  ../../../cinder_0.8.5_mac/blocks/OSC/src/OscMessage.h \
-  ../../../cinder_0.8.5_mac/blocks/OSC/src/OscArg.h \
-  ../../../cinder_0.8.5_mac/blocks/OSC/src/osc/OscTypes.h \
-  ../../../cinder_0.8.5_mac/blocks/OSC/src/osc/OscPacketListener.h \
-  ../../../cinder_0.8.5_mac/blocks/OSC/src/osc/OscReceivedElements.h \
-  ../../../cinder_0.8.5_mac/blocks/OSC/src/osc/OscException.h \
-  ../../../cinder_0.8.5_mac/blocks/OSC/src/osc/../ip/PacketListener.h \
-  ../../../cinder_0.8.5_mac/blocks/OSC/src/ip/UdpSocket.h \
-  ../../../cinder_0.8.5_mac/blocks/OSC/src/osc/../ip/NetworkingUtils.h \
-  ../../../cinder_0.8.5_mac/blocks/OSC/src/osc/../ip/IpEndpointName.h
+  /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/OscListener.h \
+  /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/OscMessage.h \
+  /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/OscArg.h \
+  /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/osc/OscTypes.h \
+  /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/osc/OscPacketListener.h \
+  /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/osc/OscReceivedElements.h \
+  /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/osc/OscException.h \
+  /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/osc/../ip/PacketListener.h \
+  /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/ip/UdpSocket.h \
+  /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/osc/../ip/NetworkingUtils.h \
+  /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/osc/../ip/IpEndpointName.h

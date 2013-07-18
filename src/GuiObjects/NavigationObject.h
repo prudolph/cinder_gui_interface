@@ -17,5 +17,5 @@ public:
    
 
 protected:
-   
+    int order;
 };
