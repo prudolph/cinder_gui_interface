@@ -10,25 +10,29 @@
 
 #pragma once
 #include "NavigationObject.h"
-
+#include <map>
 using namespace std;
 
-class NavigationBarObject:GuiObject{
+class NavigationBarObject:public GuiObject{
     
 public:
     NavigationBarObject();
-    void setup(ci::app::WindowRef window,tuio::Client *tuio,Rectf containerRect, boost::function<void(GuiObject*)> fn);
-    void draw();
+    void setup(Rectf containerRect, boost::function<void(GuiObject*)> fn);
+    void objectDraw();
     void addChild(GuiObject* o);
     
     void navButtonSelected(GuiObject *selectedObject);
     void organizeChildren();
 
     float nbBufferSz;
-    Rectf nbContainer;
     ColorA nbContainerColor;
+    
+    virtual void touchesBeganHandler();
+    virtual void touchesMovedHandler();
+    virtual void touchesEndedHandler();
     
 protected:
     vector<GuiObject*> nbChildren;
+    map<GuiObject*,int> touchCountMap;
 
 };

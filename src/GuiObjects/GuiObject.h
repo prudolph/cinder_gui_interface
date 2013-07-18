@@ -7,39 +7,44 @@
 //
 
 #pragma once
-
-//#include <boost/signal.hpp>
-//#include <boost/bind.hpp>
-
-//#include "cinder/Cinder.h"
-//#include "cinder/App/App.h"
-//#include "cinder/Vector.h"
-//#include "cinder/app/TouchEvent.h"
 #include "TuioClient.h"
-//s#include <iostream>
+
 #include "cinder/Text.h"
 #include "cinder/gl/Texture.h"
 #include <forward_list>
+
 
 using namespace std;
 using namespace ci;
 using namespace cinder::app;
 using namespace boost::signals2;
+using namespace tuio;
     
 class GuiObject {
-public:
+   public:
+    
+    //Touch Comparator based on id of touch
+    struct FindTouch {
+        uint32_t id;
+        FindTouch( TouchEvent::Touch t1 ) : id(t1.getId()){}
+        bool operator() (const TouchEvent::Touch &t2){
+            return(t2.getId() == id );
+        }
+    };
+    
+
+    
     typedef enum InputStyle { NORMAL , TOGGLE, DROPDOWN } InputStyle;
     
-    
     GuiObject();
-  
+   
+ 
     static void draw();
     static vector<TouchEvent::Touch> getMouseTouches();
     
     //Callback Functions
     
-    void registerForInput(ci::app::WindowRef window, tuio::Client *tuio=NULL);
-    
+     
     signal<void(GuiObject *)>&	getSelectedSignal() { return oOnSelectSignal; }
     void addCallBack(boost::function<void(GuiObject*)> fn){oOnSelectSignal.connect(fn);};
     virtual void onMouseBegan(MouseEvent &e);
@@ -50,6 +55,13 @@ public:
     virtual void touchesMoved(app::TouchEvent event);
     virtual void touchesEnded(app::TouchEvent event);
 
+    //These functions will be overridden to decide if the object is selected, should move, etc..
+    virtual void touchesBeganHandler();
+    virtual void touchesMovedHandler();
+    virtual void touchesEndedHandler();
+   
+    virtual void drawObject();
+    
     TouchEvent mouse2Touch(MouseEvent e);
     virtual void setSelected(bool t, bool force =false);
     bool isSelected(){return oSelected;};
@@ -77,8 +89,10 @@ public:
 
     static vector<GuiObject*>objectOrderList;
     int getTopMostObject(Vec2f pos);
-
+    void registerForInput(App* app);
     
+    bool containerHasPoint(Vec2f pnt){    return oContainer.contains(pnt);};
+       std::vector<TouchEvent::Touch> currentObjTouches;
 protected:
 
      InputStyle oStyle;
@@ -95,23 +109,23 @@ protected:
     ColorA oContainerColor;
     
     ci::app::WindowRef				oWindow;
-    tuio::Client                    *oTuioClient;
+    
     Vec2f oCenter;
     Rectf oContainer;
 
  
-
+    
     //Mouse Event Callbacks
     ci::signals::scoped_connection	oCbMouseDown, oCbMouseDrag,oCBMouseEnd;
 
     //Touch Event Callbacks
     ci::signals::scoped_connection	oCbTouchesBegan, oCbTouchesMoved,oCBTouchesEnd;
+    ci::signals::scoped_connection	oBeganSignal, oHitEndSignal;
 
-   std::vector<TouchEvent::Touch> currentObjTouches;
 
 private:
-
-    signal<void(GuiObject *)> oOnSelectSignal,oOnHitSignal;
+     static Client mTuio;
+    signal<void(GuiObject *)> oOnTouchSignal,oOnSelectSignal,oOnHitSignal;
     static   std::vector<TouchEvent::Touch> mouseTouches;
 
     

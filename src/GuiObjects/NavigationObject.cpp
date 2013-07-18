@@ -9,8 +9,8 @@
 #include "NavigationObject.h"
 
 using namespace std;
-NavigationObject::NavigationObject(){
-    console()<<"CREATED AN INTERFACE OBJECT"<<endl;
+NavigationObject::NavigationObject():GuiObject(){
+
     oCanMove=false;
     
   }

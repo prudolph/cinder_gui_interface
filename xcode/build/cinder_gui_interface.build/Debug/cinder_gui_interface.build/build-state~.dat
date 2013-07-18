@@ -5,12 +5,6 @@ cCheck dependencies
 cProcessInfoPlistFile /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/Debug/cinder_gui_interface.app/Contents/Info.plist Info.plist
 cCpResource ../resources/CinderApp.icns ./build/Debug/cinder_gui_interface.app/Contents/Resources/CinderApp.icns
 cProcessPCH++ /var/folders/mv/kzcsry1j2bb5hdg3krry8kwh0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/cinder_gui_interface_Prefix-gsibupxjzswahrejvcrwipxcoarp/cinder_gui_interface_Prefix.pch.pth cinder_gui_interface_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC ./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/cinder_gui_interfaceApp.o /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../src/cinder_gui_interfaceApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC ./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/GuiObject.o /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../src/GuiObjects/GuiObject.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC ./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/NavigationBarObject.o /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../src/GuiObjects/NavigationBarObject.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC ./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/NavigationObject.o /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../src/GuiObjects/NavigationObject.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC ./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/TuioClient.o /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/TUIO/src/TuioClient.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cLd /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/Debug/cinder_gui_interface.app/Contents/MacOS/cinder_gui_interface normal i386
 
 N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
 c000000005130312F00000000000000AA
@@ -4017,6 +4011,56 @@ c0000000051780B7E0000000000006469
 t1366821758
 s25705
 
+N/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/OscBundle.cpp
+c0000000051780B7600000000000007E1
+t1366821750
+s2017
+
+N/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/OscListener.cpp
+c0000000051780B7700000000000016B9
+t1366821751
+s5817
+
+N/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/OscMessage.cpp
+c0000000051780B7700000000000010AD
+t1366821751
+s4269
+
+N/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/ip/IpEndpointName.cpp
+c0000000051780B7700000000000009FC
+t1366821751
+s2556
+
+N/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/ip/posix/NetworkingUtils.cpp
+c0000000051780B7700000000000007B8
+t1366821751
+s1976
+
+N/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/ip/posix/UdpSocket.cpp
+c0000000051E595FA0000000000003DAD
+t1374000634
+s15789
+
+N/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/osc/OscOutboundPacketStream.cpp
+c0000000051780B770000000000003BF2
+t1366821751
+s15346
+
+N/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/osc/OscPrintReceivedElements.cpp
+c0000000051780B770000000000001C09
+t1366821751
+s7177
+
+N/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/osc/OscReceivedElements.cpp
+c0000000051780B770000000000004816
+t1366821751
+s18454
+
+N/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/osc/OscTypes.cpp
+c0000000051780B770000000000000669
+t1366821751
+s1641
+
 N/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/TUIO/src/TuioClient.cpp
 c0000000051E55CE0000000000000370D
 t1373986016
@@ -4028,24 +4072,24 @@ t1374083642
 s459637
 
 N/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../src/GuiObjects/GuiObject.cpp
-c0000000051E7144D000000000000269D
-t1374098509
-s9885
+c0000000051E81D5F0000000000002A9C
+t1374166367
+s10908
 
 N/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../src/GuiObjects/NavigationBarObject.cpp
-c0000000051E7151C00000000000006C4
-t1374098716
-s1732
+c0000000051E81DE70000000000000653
+t1374166503
+s1619
 
 N/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../src/GuiObjects/NavigationObject.cpp
-c0000000051E714040000000000000109
-t1374098436
-s265
+c0000000051E8171500000000000000D6
+t1374164757
+s214
 
 N/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../src/cinder_gui_interfaceApp.cpp
-c0000000051E714F50000000000000E50
-t1374098677
-s3664
+c0000000051E81E720000000000000B1C
+t1374166642
+s2844
 
 N/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/Debug/cinder_gui_interface.app
 t2
@@ -4071,6 +4115,10 @@ N/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build
 t2
 s0
 
+N/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/IpEndpointName.o
+t2
+s0
+
 N/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/NavigationBarObject.o
 t2
 s0
@@ -4079,14 +4127,50 @@ N/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build
 t2
 s0
 
+N/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/NetworkingUtils.o
+t2
+s0
+
+N/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/OscBundle.o
+t2
+s0
+
+N/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/OscListener.o
+t2
+s0
+
+N/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/OscMessage.o
+t2
+s0
+
+N/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/OscOutboundPacketStream.o
+t2
+s0
+
+N/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/OscPrintReceivedElements.o
+t2
+s0
+
+N/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/OscReceivedElements.o
+t2
+s0
+
+N/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/OscTypes.o
+t2
+s0
+
 N/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/TuioClient.o
 t2
 s0
 
+N/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/UdpSocket.o
+t2
+s0
+
 N/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/cinder_gui_interface.LinkFileList
-c0000000051E8054F000000000000037C
-t1374160207
-s892
+c0000000051E81E730000000000000A68
+t1374166643
+s2664
 
 N/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/cinder_gui_interfaceApp.o
 t2
@@ -4114,6 +4198,36 @@ c0000000051E6E1BF0000000000000462
 t1374085567
 s1122
 
+CBuild AST from /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/OscBundle.cpp
+r0
+
+CBuild AST from /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/OscListener.cpp
+r0
+
+CBuild AST from /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/OscMessage.cpp
+r0
+
+CBuild AST from /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/ip/IpEndpointName.cpp
+r0
+
+CBuild AST from /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/ip/posix/NetworkingUtils.cpp
+r0
+
+CBuild AST from /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/ip/posix/UdpSocket.cpp
+r0
+
+CBuild AST from /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/osc/OscOutboundPacketStream.cpp
+r0
+
+CBuild AST from /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/osc/OscPrintReceivedElements.cpp
+r0
+
+CBuild AST from /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/osc/OscReceivedElements.cpp
+r0
+
+CBuild AST from /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/osc/OscTypes.cpp
+r0
+
 CBuild AST from /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/TUIO/src/TuioClient.cpp
 r0
 
@@ -4131,135 +4245,80 @@ r0
 
 CCheck dependencies
 r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies63d568cf3c98b741^6a1787cf3c98b741^---0#1#0#--18"Check dependencies36"8291A385-904E-4512-88ED-EE2D75947390-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesd5cea0f35598b741^bfbbc5f35598b741^---0#1#0#--18"Check dependencies36"8FE53561-D3C7-42E2-91FB-DAB85DF97B89-
 
 CCompileC ./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/GuiObject.o /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../src/GuiObjects/GuiObject.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s395853011.128804
-e395853014.274704
-r1
-xCompileC
-x./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/GuiObject.o
-x/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../src/GuiObjects/GuiObject.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection111"Compile /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../src/GuiObjects/GuiObject.cpp061121d33c98b741^bd5246d63c98b741^---0#0#0#-19%DVTDocumentLocation2@119"file://localhost/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../src/GuiObjects/GuiObject.cpp0000000000000000^3622"CompileC ./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/GuiObject.o ../src/GuiObjects/GuiObject.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/cinder_gui_interface-generated-files.hmap -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/cinder_gui_interface-own-target-headers.hmap -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/cinder_gui_interface-all-target-headers.hmap -iquote /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/cinder_gui_interface-project-headers.hmap -iquote../../../cinder_0.8.5_mac/include -iquote../include -iquote../../../cinder_0.8.5_mac/blocks/OSC/src -iquote../../../cinder_0.8.5_mac/blocks/TUIO/include -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/build/Debug/include -I../../../cinder_0.8.5_mac/boost -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/DerivedSources/i386 -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/DerivedSources -F/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/build/Debug -include /var/folders/mv/kzcsry1j2bb5hdg3krry8kwh0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/cinder_gui_interface_Prefix-gsibupxjzswahrejvcrwipxcoarp/cinder_gui_interface_Prefix.pch -MMD -MT dependencies -MF /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/GuiObject.d --serialize-diagnostics /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/GuiObject.dia -c /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../src/GuiObjects/GuiObject.cpp -o /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/GuiObject.o36"5F5E7D17-527E-445B-A96E-E4356489BA32-
+r0
+
+CCompileC ./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/IpEndpointName.o /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/ip/IpEndpointName.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
 
 CCompileC ./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/NavigationBarObject.o /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../src/GuiObjects/NavigationBarObject.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s395853011.128831
-e395853013.222010
-r1
-xCompileC
-x./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/NavigationBarObject.o
-x/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../src/GuiObjects/NavigationBarObject.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection121"Compile /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../src/GuiObjects/NavigationBarObject.cpp5a1121d33c98b741^b7d538d53c98b741^---0#0#0#-19%DVTDocumentLocation2@129"file://localhost/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../src/GuiObjects/NavigationBarObject.cpp0000000000000000^3682"CompileC ./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/NavigationBarObject.o ../src/GuiObjects/NavigationBarObject.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/cinder_gui_interface-generated-files.hmap -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/cinder_gui_interface-own-target-headers.hmap -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/cinder_gui_interface-all-target-headers.hmap -iquote /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/cinder_gui_interface-project-headers.hmap -iquote../../../cinder_0.8.5_mac/include -iquote../include -iquote../../../cinder_0.8.5_mac/blocks/OSC/src -iquote../../../cinder_0.8.5_mac/blocks/TUIO/include -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/build/Debug/include -I../../../cinder_0.8.5_mac/boost -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/DerivedSources/i386 -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/DerivedSources -F/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/build/Debug -include /var/folders/mv/kzcsry1j2bb5hdg3krry8kwh0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/cinder_gui_interface_Prefix-gsibupxjzswahrejvcrwipxcoarp/cinder_gui_interface_Prefix.pch -MMD -MT dependencies -MF /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/NavigationBarObject.d --serialize-diagnostics /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/NavigationBarObject.dia -c /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../src/GuiObjects/NavigationBarObject.cpp -o /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/NavigationBarObject.o36"D2466046-DA41-4EC4-8CD8-3D770401D182-
+r0
 
 CCompileC ./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/NavigationObject.o /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../src/GuiObjects/NavigationObject.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s395853011.129207
-e395853012.920371
-r1
-xCompileC
-x./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/NavigationObject.o
-x/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../src/GuiObjects/NavigationObject.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection118"Compile /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../src/GuiObjects/NavigationObject.cppe92621d33c98b741^c79cebd43c98b741^---0#0#0#-19%DVTDocumentLocation2@126"file://localhost/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../src/GuiObjects/NavigationObject.cpp0000000000000000^3664"CompileC ./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/NavigationObject.o ../src/GuiObjects/NavigationObject.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/cinder_gui_interface-generated-files.hmap -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/cinder_gui_interface-own-target-headers.hmap -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/cinder_gui_interface-all-target-headers.hmap -iquote /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/cinder_gui_interface-project-headers.hmap -iquote../../../cinder_0.8.5_mac/include -iquote../include -iquote../../../cinder_0.8.5_mac/blocks/OSC/src -iquote../../../cinder_0.8.5_mac/blocks/TUIO/include -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/build/Debug/include -I../../../cinder_0.8.5_mac/boost -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/DerivedSources/i386 -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/DerivedSources -F/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/build/Debug -include /var/folders/mv/kzcsry1j2bb5hdg3krry8kwh0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/cinder_gui_interface_Prefix-gsibupxjzswahrejvcrwipxcoarp/cinder_gui_interface_Prefix.pch -MMD -MT dependencies -MF /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/NavigationObject.d --serialize-diagnostics /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/NavigationObject.dia -c /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../src/GuiObjects/NavigationObject.cpp -o /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/NavigationObject.o36"D2B37242-6793-4855-9DBF-1CD8B679A5FA-
+r0
+
+CCompileC ./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/NetworkingUtils.o /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/ip/posix/NetworkingUtils.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/OscBundle.o /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/OscBundle.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/OscListener.o /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/OscListener.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/OscMessage.o /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/OscMessage.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/OscOutboundPacketStream.o /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/osc/OscOutboundPacketStream.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/OscPrintReceivedElements.o /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/osc/OscPrintReceivedElements.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/OscReceivedElements.o /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/osc/OscReceivedElements.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/OscTypes.o /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/osc/OscTypes.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
 
 CCompileC ./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/TuioClient.o /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/TUIO/src/TuioClient.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s395853012.921645
-e395853015.736058
-r1
-xCompileC
-x./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/TuioClient.o
-x/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/TUIO/src/TuioClient.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection113"Compile /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/TUIO/src/TuioClient.cpp4607ecd43c98b741^0070bcd73c98b741^---0#0#0#-19%DVTDocumentLocation2@121"file://localhost/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/TUIO/src/TuioClient.cpp0000000000000000^3630"CompileC ./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/TuioClient.o ../blocks/TUIO/src/TuioClient.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/cinder_gui_interface-generated-files.hmap -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/cinder_gui_interface-own-target-headers.hmap -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/cinder_gui_interface-all-target-headers.hmap -iquote /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/cinder_gui_interface-project-headers.hmap -iquote../../../cinder_0.8.5_mac/include -iquote../include -iquote../../../cinder_0.8.5_mac/blocks/OSC/src -iquote../../../cinder_0.8.5_mac/blocks/TUIO/include -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/build/Debug/include -I../../../cinder_0.8.5_mac/boost -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/DerivedSources/i386 -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/DerivedSources -F/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/build/Debug -include /var/folders/mv/kzcsry1j2bb5hdg3krry8kwh0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/cinder_gui_interface_Prefix-gsibupxjzswahrejvcrwipxcoarp/cinder_gui_interface_Prefix.pch -MMD -MT dependencies -MF /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/TuioClient.d --serialize-diagnostics /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/TuioClient.dia -c /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/TUIO/src/TuioClient.cpp -o /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/TuioClient.o36"EACD2A21-E2A7-4D43-AAB2-C042E5C2EF51-
+r0
+
+CCompileC ./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/UdpSocket.o /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../blocks/OSC/src/ip/posix/UdpSocket.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
 
 CCompileC ./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/cinder_gui_interfaceApp.o /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../src/cinder_gui_interfaceApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s395853011.128797
-e395853013.832626
-r1
-xCompileC
-x./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/cinder_gui_interfaceApp.o
-x/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../src/cinder_gui_interfaceApp.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection114"Compile /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../src/cinder_gui_interfaceApp.cpp341221d33c98b741^d926d5d53c98b741^---0#0#0#-19%DVTDocumentLocation2@122"file://localhost/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../src/cinder_gui_interfaceApp.cpp0000000000000000^3684"CompileC ./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/cinder_gui_interfaceApp.o ../src/cinder_gui_interfaceApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/cinder_gui_interface-generated-files.hmap -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/cinder_gui_interface-own-target-headers.hmap -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/cinder_gui_interface-all-target-headers.hmap -iquote /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/cinder_gui_interface-project-headers.hmap -iquote../../../cinder_0.8.5_mac/include -iquote../include -iquote../../../cinder_0.8.5_mac/blocks/OSC/src -iquote../../../cinder_0.8.5_mac/blocks/TUIO/include -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/build/Debug/include -I../../../cinder_0.8.5_mac/boost -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/DerivedSources/i386 -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/DerivedSources -F/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/build/Debug -include /var/folders/mv/kzcsry1j2bb5hdg3krry8kwh0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/cinder_gui_interface_Prefix-gsibupxjzswahrejvcrwipxcoarp/cinder_gui_interface_Prefix.pch -MMD -MT dependencies -MF /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/cinder_gui_interfaceApp.d --serialize-diagnostics /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/cinder_gui_interfaceApp.dia -c /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../src/cinder_gui_interfaceApp.cpp -o /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/cinder_gui_interfaceApp.o36"4DC8D8C9-AF0A-4477-86BB-D4C550C466F1-
+r0
 
 CCpResource ../resources/CinderApp.icns ./build/Debug/cinder_gui_interface.app/Contents/Resources/CinderApp.icns
-s395853007.568592
-e395853007.574615
+s395859443.811968
+e395859443.837241
 r1
 xCpResource
 x../resources/CinderApp.icns
 x./build/Debug/cinder_gui_interface.app/Contents/Resources/CinderApp.icns
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Copy ./build/Debug/cinder_gui_interface.app/Contents/Resources/CinderApp.icns029d91cf3c98b741^066493cf3c98b741^---0#0#0#-19%DVTDocumentLocation2@160"file://localhost/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/Debug/cinder_gui_interface.app/Contents/Resources/CinderApp.icns000000000080d041^533"CpResource ../resources/CinderApp.icns ./build/Debug/cinder_gui_interface.app/Contents/Resources/CinderApp.icns    cd /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../resources/CinderApp.icns /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/Debug/cinder_gui_interface.app/Contents/Resources36"193B9A25-7C03-464C-A7F6-A094AD438D60-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Copy ./build/Debug/cinder_gui_interface.app/Contents/Resources/CinderApp.icns75e9cff35598b741^bb5ed6f35598b741^---0#0#0#-19%DVTDocumentLocation2@160"file://localhost/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/Debug/cinder_gui_interface.app/Contents/Resources/CinderApp.icns000000000080d041^533"CpResource ../resources/CinderApp.icns ./build/Debug/cinder_gui_interface.app/Contents/Resources/CinderApp.icns    cd /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/../resources/CinderApp.icns /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/Debug/cinder_gui_interface.app/Contents/Resources36"CA2DF0F2-E490-49B8-97E2-AFBEDB027DAC-
 
 CLd /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/Debug/cinder_gui_interface.app/Contents/MacOS/cinder_gui_interface normal i386
-s395853015.742981
-e395853016.368767
 r0
-xLd
-x/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/Debug/cinder_gui_interface.app/Contents/MacOS/cinder_gui_interface
-xnormal
-xi386
-oUndefined symbols for architecture i386:
-o  "cinder::osc::Message::getArgAsFloat(int, bool) const", referenced from:
-o      cinder::tuio::Cursor25d::createFromSetMessage(cinder::osc::Message const&) in TuioClient.o
-o      cinder::tuio::Cursor::createFromSetMessage(cinder::osc::Message const&) in TuioClient.o
-o      cinder::tuio::Object::createFromSetMessage(cinder::osc::Message const&) in TuioClient.o
-o  "cinder::osc::Message::getArgAsString(int, bool) const", referenced from:
-o      cinder::tuio::ProfileHandler<cinder::tuio::Object>::handleMessage(cinder::osc::Message const&, int) in TuioClient.o
-o      cinder::tuio::ProfileHandler<cinder::tuio::Cursor>::handleMessage(cinder::osc::Message const&, int) in TuioClient.o
-o      cinder::tuio::ProfileHandler<cinder::tuio::Cursor25d>::handleMessage(cinder::osc::Message const&, int) in TuioClient.o
-o  "cinder::osc::Message::getArgAsInt32(int, bool) const", referenced from:
-o      cinder::tuio::ProfileHandler<cinder::tuio::Object>::handleMessage(cinder::osc::Message const&, int) in TuioClient.o
-o      cinder::tuio::ProfileHandler<cinder::tuio::Cursor>::handleMessage(cinder::osc::Message const&, int) in TuioClient.o
-o      cinder::tuio::ProfileHandler<cinder::tuio::Cursor25d>::handleMessage(cinder::osc::Message const&, int) in TuioClient.o
-o      cinder::tuio::Cursor25d::createFromSetMessage(cinder::osc::Message const&) in TuioClient.o
-o      cinder::tuio::Cursor::createFromSetMessage(cinder::osc::Message const&) in TuioClient.o
-o      cinder::tuio::Object::createFromSetMessage(cinder::osc::Message const&) in TuioClient.o
-o  "cinder::osc::Listener::registerMessageReceived(std::__1::function<void (cinder::osc::Message const*)>)", referenced from:
-o      unsigned int cinder::osc::Listener::registerMessageReceived<cinder::tuio::Client>(cinder::tuio::Client*, void (cinder::tuio::Client::*)(cinder::osc::Message const*)) in TuioClient.o
-o  "cinder::osc::Message::getNumArgs() const", referenced from:
-o      cinder::tuio::ProfileHandler<cinder::tuio::Object>::handleMessage(cinder::osc::Message const&, int) in TuioClient.o
-o      cinder::tuio::ProfileHandler<cinder::tuio::Cursor>::handleMessage(cinder::osc::Message const&, int) in TuioClient.o
-o      cinder::tuio::ProfileHandler<cinder::tuio::Cursor25d>::handleMessage(cinder::osc::Message const&, int) in TuioClient.o
-o  "cinder::osc::Listener::setup(int)", referenced from:
-o      cinder::tuio::Client::connect(int) in TuioClient.o
-o  "cinder::osc::Listener::Listener()", referenced from:
-o      cinder::tuio::Client::Client() in TuioClient.o
-old: symbol(s) not found for architecture i386
-oclang: error: linker command failed with exit code 1 (use -v to see invocation)
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection151"Link /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/Debug/cinder_gui_interface.app/Contents/MacOS/cinder_gui_interfaceb744bed73c98b741^77665ed83c98b741^-2668"Undefined symbols for architecture i386:  "cinder::osc::Message::getArgAsFloat(int, bool) const", referenced from:      cinder::tuio::Cursor25d::createFromSetMessage(cinder::osc::Message const&) in TuioClient.o      cinder::tuio::Cursor::createFromSetMessage(cinder::osc::Message const&) in TuioClient.o      cinder::tuio::Object::createFromSetMessage(cinder::osc::Message const&) in TuioClient.o  "cinder::osc::Message::getArgAsString(int, bool) const", referenced from:      cinder::tuio::ProfileHandler<cinder::tuio::Object>::handleMessage(cinder::osc::Message const&, int) in TuioClient.o      cinder::tuio::ProfileHandler<cinder::tuio::Cursor>::handleMessage(cinder::osc::Message const&, int) in TuioClient.o      cinder::tuio::ProfileHandler<cinder::tuio::Cursor25d>::handleMessage(cinder::osc::Message const&, int) in TuioClient.o  "cinder::osc::Message::getArgAsInt32(int, bool) const", referenced from:      cinder::tuio::ProfileHandler<cinder::tuio::Object>::handleMessage(cinder::osc::Message const&, int) in TuioClient.o      cinder::tuio::ProfileHandler<cinder::tuio::Cursor>::handleMessage(cinder::osc::Message const&, int) in TuioClient.o      cinder::tuio::ProfileHandler<cinder::tuio::Cursor25d>::handleMessage(cinder::osc::Message const&, int) in TuioClient.o      cinder::tuio::Cursor25d::createFromSetMessage(cinder::osc::Message const&) in TuioClient.o      cinder::tuio::Cursor::createFromSetMessage(cinder::osc::Message const&) in TuioClient.o      cinder::tuio::Object::createFromSetMessage(cinder::osc::Message const&) in TuioClient.o  "cinder::osc::Listener::registerMessageReceived(std::__1::function<void (cinder::osc::Message const*)>)", referenced from:      unsigned int cinder::osc::Listener::registerMessageReceived<cinder::tuio::Client>(cinder::tuio::Client*, void (cinder::tuio::Client::*)(cinder::osc::Message const*)) in TuioClient.o  "cinder::osc::Message::getNumArgs() const", referenced from:      cinder::tuio::ProfileHandler<cinder::tuio::Object>::handleMessage(cinder::osc::Message const&, int) in TuioClient.o      cinder::tuio::ProfileHandler<cinder::tuio::Cursor>::handleMessage(cinder::osc::Message const&, int) in TuioClient.o      cinder::tuio::ProfileHandler<cinder::tuio::Cursor25d>::handleMessage(cinder::osc::Message const&, int) in TuioClient.o  "cinder::osc::Listener::setup(int)", referenced from:      cinder::tuio::Client::connect(int) in TuioClient.o  "cinder::osc::Listener::Listener()", referenced from:      cinder::tuio::Client::Client() in TuioClient.old: symbol(s) not found for architecture i386clang: error: linker command failed with exit code 1 (use -v to see invocation)27(21%IDEActivityLogMessage2@72""cinder::osc::Message::getArgAsFloat(int, bool) const", referenced from:-395853016#41#75#-2#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@90"Cinder::tuio::Cursor25d::createFromSetMessage(cinder::osc::Message const&) in TuioClient.o-395853016#116#97#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@87"Cinder::tuio::Cursor::createFromSetMessage(cinder::osc::Message const&) in TuioClient.o-395853016#213#94#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@87"Cinder::tuio::Object::createFromSetMessage(cinder::osc::Message const&) in TuioClient.o-395853016#307#94#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@73""cinder::osc::Message::getArgAsString(int, bool) const", referenced from:-395853016#401#76#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@115"Cinder::tuio::ProfileHandler<cinder::tuio::Object>::handleMessage(cinder::osc::Message const&, int) in TuioClient.o-395853016#477#122#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@115"Cinder::tuio::ProfileHandler<cinder::tuio::Cursor>::handleMessage(cinder::osc::Message const&, int) in TuioClient.o-395853016#599#122#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@118"Cinder::tuio::ProfileHandler<cinder::tuio::Cursor25d>::handleMessage(cinder::osc::Message const&, int) in TuioClient.o-395853016#721#125#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@72""cinder::osc::Message::getArgAsInt32(int, bool) const", referenced from:-395853016#846#75#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@115"Cinder::tuio::ProfileHandler<cinder::tuio::Object>::handleMessage(cinder::osc::Message const&, int) in TuioClient.o-395853016#921#122#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@115"Cinder::tuio::ProfileHandler<cinder::tuio::Cursor>::handleMessage(cinder::osc::Message const&, int) in TuioClient.o-395853016#1043#122#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@118"Cinder::tuio::ProfileHandler<cinder::tuio::Cursor25d>::handleMessage(cinder::osc::Message const&, int) in TuioClient.o-395853016#1165#125#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@90"Cinder::tuio::Cursor25d::createFromSetMessage(cinder::osc::Message const&) in TuioClient.o-395853016#1290#97#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@87"Cinder::tuio::Cursor::createFromSetMessage(cinder::osc::Message const&) in TuioClient.o-395853016#1387#94#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@87"Cinder::tuio::Object::createFromSetMessage(cinder::osc::Message const&) in TuioClient.o-395853016#1481#94#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@122""cinder::osc::Listener::registerMessageReceived(std::__1::function<void (cinder::osc::Message const*)>)", referenced from:-395853016#1575#125#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@181"Unsigned int cinder::osc::Listener::registerMessageReceived<cinder::tuio::Client>(cinder::tuio::Client*, void (cinder::tuio::Client::*)(cinder::osc::Message const*)) in TuioClient.o-395853016#1700#188#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@60""cinder::osc::Message::getNumArgs() const", referenced from:-395853016#1888#63#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@115"Cinder::tuio::ProfileHandler<cinder::tuio::Object>::handleMessage(cinder::osc::Message const&, int) in TuioClient.o-395853016#1951#122#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@115"Cinder::tuio::ProfileHandler<cinder::tuio::Cursor>::handleMessage(cinder::osc::Message const&, int) in TuioClient.o-395853016#2073#122#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@118"Cinder::tuio::ProfileHandler<cinder::tuio::Cursor25d>::handleMessage(cinder::osc::Message const&, int) in TuioClient.o-395853016#2195#125#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@53""cinder::osc::Listener::setup(int)", referenced from:-395853016#2320#56#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@50"Cinder::tuio::Client::connect(int) in TuioClient.o-395853016#2376#57#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@53""cinder::osc::Listener::Listener()", referenced from:-395853016#2433#56#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@46"Cinder::tuio::Client::Client() in TuioClient.o-395853016#2489#53#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@41"Symbol(s) not found for architecture i386-395853016#2542#46#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@65"Linker command failed with exit code 1 (use -v to see invocation)-395853016#2588#80#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--0#0#0#--1213"Ld ./build/Debug/cinder_gui_interface.app/Contents/MacOS/cinder_gui_interface normal i386    cd /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode    setenv MACOSX_DEPLOYMENT_TARGET 10.7    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -L/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/build/Debug -F/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/build/Debug -filelist /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/Objects-normal/i386/cinder_gui_interface.LinkFileList -mmacosx-version-min=10.7 -dead_strip ../../../cinder_0.8.5_mac/lib/libcinder_d.a -stdlib=libc++ -framework Cocoa -framework OpenGL -framework CoreVideo -framework QTKit -framework Accelerate -framework AudioToolbox -framework AudioUnit -framework CoreAudio -o /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/Debug/cinder_gui_interface.app/Contents/MacOS/cinder_gui_interface36"779BC110-CC4F-4D7B-8B45-EB8DE58C8F57-
 
 CProcessInfoPlistFile /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/Debug/cinder_gui_interface.app/Contents/Info.plist Info.plist
-s395853007.548515
-e395853007.552390
+s395859443.797415
+e395859443.803855
 r1
 xProcessInfoPlistFile
 x/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/Debug/cinder_gui_interface.app/Contents/Info.plist
 xInfo.plist
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Process Info.plist64788ccf3c98b741^bc758ecf3c98b741^---0#0#0#-19%DVTDocumentLocation2@98"file://localhost/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/Info.plist0000000000000000^522"ProcessInfoPlistFile ./build/Debug/cinder_gui_interface.app/Contents/Info.plist Info.plist    cd /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode    builtin-infoPlistUtility Info.plist -genpkginfo /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/Debug/cinder_gui_interface.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/Debug/cinder_gui_interface.app/Contents/Info.plist36"3B5B8594-3715-4476-B869-BC01E06A4BB8-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Process Info.plist0531ccf35598b741^0403d0f35598b741^---0#0#0#-19%DVTDocumentLocation2@98"file://localhost/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/Info.plist0000000000000000^522"ProcessInfoPlistFile ./build/Debug/cinder_gui_interface.app/Contents/Info.plist Info.plist    cd /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode    builtin-infoPlistUtility Info.plist -genpkginfo /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/Debug/cinder_gui_interface.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/Debug/cinder_gui_interface.app/Contents/Info.plist36"90C9519C-E9DB-4A3A-AB6D-DF674A0B9879-
 
 CProcessPCH++ /Users/joshgoldblum/Library/Developer/Xcode/DerivedData/cinder_gui_interface-hbrkklagcabbfsfqiwlwqlenrneg/Index/PrecompiledHeaders/cinder_gui_interface_Prefix-ccbugmwqifmewufpoyonvirauubc_ast/cinder_gui_interface_Prefix.pch.pth cinder_gui_interface_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.astbuilder
 r0
 
 CProcessPCH++ /var/folders/mv/kzcsry1j2bb5hdg3krry8kwh0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/cinder_gui_interface_Prefix-gsibupxjzswahrejvcrwipxcoarp/cinder_gui_interface_Prefix.pch.pth cinder_gui_interface_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s395853007.585609
-e395853011.121994
+s395859443.845586
+e395859450.379484
 r1
 xProcessPCH++
 x/var/folders/mv/kzcsry1j2bb5hdg3krry8kwh0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/cinder_gui_interface_Prefix-gsibupxjzswahrejvcrwipxcoarp/cinder_gui_interface_Prefix.pch.pth
@@ -4268,7 +4327,7 @@ xnormal
 xi386
 xc++
 xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection42"Precompile cinder_gui_interface_Prefix.pch6f7e97cf3c98b741^809c24d33c98b741^---0#0#0#-19%DVTDocumentLocation2@119"file://localhost/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/cinder_gui_interface_Prefix.pch0000000000000000^3569"ProcessPCH++ /var/folders/mv/kzcsry1j2bb5hdg3krry8kwh0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/cinder_gui_interface_Prefix-gsibupxjzswahrejvcrwipxcoarp/cinder_gui_interface_Prefix.pch.pth cinder_gui_interface_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++-header -arch i386 -fmessage-length=0 -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/cinder_gui_interface-generated-files.hmap -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/cinder_gui_interface-own-target-headers.hmap -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/cinder_gui_interface-all-target-headers.hmap -iquote /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/cinder_gui_interface-project-headers.hmap -iquote../../../cinder_0.8.5_mac/include -iquote../include -iquote../../../cinder_0.8.5_mac/blocks/OSC/src -iquote../../../cinder_0.8.5_mac/blocks/TUIO/include -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/build/Debug/include -I../../../cinder_0.8.5_mac/boost -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/DerivedSources/i386 -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/DerivedSources -F/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/build/Debug --serialize-diagnostics /var/folders/mv/kzcsry1j2bb5hdg3krry8kwh0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/cinder_gui_interface_Prefix-gsibupxjzswahrejvcrwipxcoarp/cinder_gui_interface_Prefix.pch.dia -c /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/cinder_gui_interface_Prefix.pch -o /var/folders/mv/kzcsry1j2bb5hdg3krry8kwh0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/cinder_gui_interface_Prefix-gsibupxjzswahrejvcrwipxcoarp/cinder_gui_interface_Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/mv/kzcsry1j2bb5hdg3krry8kwh0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/cinder_gui_interface_Prefix-gsibupxjzswahrejvcrwipxcoarp/cinder_gui_interface_Prefix.pch.d36"F2BD850C-F991-44E4-BB7C-670438FC5D79-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection42"Precompile cinder_gui_interface_Prefix.pch118fd8f35598b741^422661fa5598b741^---0#0#0#-19%DVTDocumentLocation2@119"file://localhost/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/cinder_gui_interface_Prefix.pch0000000000000000^3569"ProcessPCH++ /var/folders/mv/kzcsry1j2bb5hdg3krry8kwh0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/cinder_gui_interface_Prefix-gsibupxjzswahrejvcrwipxcoarp/cinder_gui_interface_Prefix.pch.pth cinder_gui_interface_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++-header -arch i386 -fmessage-length=0 -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/cinder_gui_interface-generated-files.hmap -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/cinder_gui_interface-own-target-headers.hmap -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/cinder_gui_interface-all-target-headers.hmap -iquote /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/cinder_gui_interface-project-headers.hmap -iquote../../../cinder_0.8.5_mac/include -iquote../include -iquote../../../cinder_0.8.5_mac/blocks/OSC/src -iquote../../../cinder_0.8.5_mac/blocks/TUIO/include -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/build/Debug/include -I../../../cinder_0.8.5_mac/boost -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/DerivedSources/i386 -I/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/cinder_gui_interface.build/Debug/cinder_gui_interface.build/DerivedSources -F/Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/build/Debug --serialize-diagnostics /var/folders/mv/kzcsry1j2bb5hdg3krry8kwh0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/cinder_gui_interface_Prefix-gsibupxjzswahrejvcrwipxcoarp/cinder_gui_interface_Prefix.pch.dia -c /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/cinder_gui_interface_Prefix.pch -o /var/folders/mv/kzcsry1j2bb5hdg3krry8kwh0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/cinder_gui_interface_Prefix-gsibupxjzswahrejvcrwipxcoarp/cinder_gui_interface_Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/mv/kzcsry1j2bb5hdg3krry8kwh0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/cinder_gui_interface_Prefix-gsibupxjzswahrejvcrwipxcoarp/cinder_gui_interface_Prefix.pch.d36"23899A94-A9D3-4759-B91A-8035F4AC14FB-
 
 CTouch /Users/joshgoldblum/Documents/Cinder_SandBox/cinder_gui_interface/xcode/./build/Debug/cinder_gui_interface.app
 r0
