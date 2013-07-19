@@ -15,7 +15,6 @@ public:
      
     NavigationObject();
    
-
 protected:
     int order;
 };
