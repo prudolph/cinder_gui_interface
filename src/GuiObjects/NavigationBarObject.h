@@ -26,3 +26,7 @@ protected:
     Vec2f nextObjectPosition;
     float buttonSpacing;   
 };
+
+
+
+

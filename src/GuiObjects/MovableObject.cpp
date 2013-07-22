@@ -10,6 +10,9 @@
 MovableObject:: MovableObject(){
 
     console()<<"CREATED MOVEABLE OBJECT"<<endl;
+    //Set background color
+    gui_ContainerColor = ColorA(0.0f,1.0f,0.0f,1.0f);
+    
 }
 
 void MovableObject::touchesBeganHandler(){
@@ -41,7 +44,5 @@ void MovableObject::touchesMovedHandler(){
 
 
 void MovableObject::touchesEndedHandler(){
-    console()<<"MoveableTouch ENDED Handler "<<endl;
     if(gui_ObjectTouches.size()==0) setSelected(false);
-    
 }

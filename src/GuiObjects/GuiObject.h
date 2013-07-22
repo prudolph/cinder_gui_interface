@@ -42,6 +42,64 @@ public://anyone can gete access to this stuff with the "." accessor
     virtual void setHit(bool state);
     bool isHit(){return gui_Hit;}
     
+
+     
+     /*
+      
+      movableObject.setContainer(Vec2f(400,400), 100, 100);
+      movableObject.registerForInput(app);
+      movableObject.setContainerColor(ColorA(1.0f,0.0f,0.0f,1.0f));
+      movableObject.setText("Mooovable GuiObject 0");
+      
+      #warning Figure out how to manage call backs
+      // guiObject.addCallBack(bind(buttonCallback,this,std::__1::placeholders::_1));
+      
+
+      
+      
+      
+     TextBox() : mAlign( LEFT ), mSize( GROW, GROW ), mFont( Font::getDefault() ), mInvalid( true ), mColor( 1, 1, 1, 1 ), mBackgroundColor( 0, 0, 0, 0 ), mPremultiplied( false ), mLigate( true ) {}
+     
+     TextBox&			size( Vec2i sz ) { setSize( sz ); return *this; }
+     TextBox&			size( int width, int height ) { setSize( Vec2i( width, height ) ); return *this; }
+     Vec2i				getSize() const { return mSize; }
+     void				setSize( Vec2i sz ) { mSize = sz; mInvalid = true; }
+     
+     TextBox&			text( const std::string &t ) { setText( t ); return *this; }
+     const std::string&	getText() const { return mText; }
+     void				setText( const std::string &t ) { mText = t; mInvalid = true; }
+     void				appendText( const std::string &t ) { mText += t; mInvalid = true; }
+     
+     TextBox&			font( const Font &f ) { setFont( f ); return *this; }
+     const Font&			getFont() const { return mFont; }
+     void				setFont( const Font &f ) { mFont = f; mInvalid = true; }
+     
+     TextBox&			alignment( Alignment align ) { setAlignment( align ); return *this; }
+     Alignment			getAlignment() const { return mAlign; }
+     void				setAlignment( Alignment align ) { mAlign = align; mInvalid = true; }
+     
+     TextBox&			color( ColorA color ) { setColor( color ); return *this; }
+     ColorA				getColor() const { return mColor; }
+     void				setColor( ColorA color ) { mColor = color; mInvalid = true; }
+     
+     TextBox&			backgroundColor( ColorA bgColor ) { setBackgroundColor( bgColor ); return *this; }
+     ColorA				getBackgroundColor() const { return mBackgroundColor; }
+     void				setBackgroundColor( ColorA bgColor ) { mBackgroundColor = bgColor; }
+     
+     TextBox&			premultiplied( bool premult = true ) { setPremultiplied( premult ); return *this; }
+     bool				getPremultiplied() const { return mPremultiplied; }
+     void				setPremultiplied( bool premult ) { mPremultiplied = premult; }
+     
+     TextBox&			ligate( bool ligateText = true ) { setLigate( ligateText ); return *this; }
+     bool				getLigate() const { return mLigate; }
+     void				setLigate( bool ligateText ) { mLigate = ligateText; }
+     
+     */
+     
+    
+    
+    
+    
     
     //Positioning and size Functions getters and setters
     virtual void        setContainer(Vec2f pos, float w , float h ){ gui_Position = pos; gui_Width =w; gui_Height=h; }
