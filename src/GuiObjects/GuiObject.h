@@ -44,8 +44,8 @@ public://anyone can gete access to this stuff with the "." accessor
     
     
     //Positioning and size Functions getters and setters
-    virtual void setContainer(Vec2f pos, float w , float h ){ gui_Position = pos; gui_Width =w; gui_Height=h; }
-	virtual Vec2f	getPosition() const { return gui_Position; }
+    virtual void        setContainer(Vec2f pos, float w , float h ){ gui_Position = pos; gui_Width =w; gui_Height=h; }
+	virtual Vec2f       getPosition() const { return gui_Position; }
 	virtual void		setPosition( float x, float y ){ gui_Position = Vec2f(x, y);}
 	virtual void		setPosition( const Vec2f &pt ){ gui_Position = pt; }
     
@@ -62,29 +62,30 @@ public://anyone can gete access to this stuff with the "." accessor
 	virtual void		setSize( const ci::Vec2i &size ){ gui_Width=(float)size.x; gui_Height=(float)size.y; }
 
     ///////
-    Vec2f convertToObjectSpace(Vec2f pos);
-    Vec2f convertToWindowSpace(Vec2f pos);
+    Vec2f   convertToObjectSpace(Vec2f pos);
+    Vec2f   convertToWindowSpace(Vec2f pos);
     
     //Color Functions
-    void setContainerColor(ColorA clr){ gui_ContainerColor = clr;};
-    ColorA getContainerColor(){return gui_ContainerColor;};
+    void    setContainerColor(ColorA clr){ gui_ContainerColor = clr;};
+    ColorA  getContainerColor(){return gui_ContainerColor;};
 
     //Set if the object should be drawn
-    void setVisible(bool v = true){gui_IsVisible=v;}
+    void    setVisible(bool v = true){gui_IsVisible=v;}
 
     
     //Text FUnctions
-    void setText(string s);
-    void updateTextBox();
-    string getText(){return gui_Text;};
+    void    setText(string s);
+    void    updateTextBox();
+    string  getText(){return gui_Text;};
     
 
 
-    int getTopMostObject(Vec2f pos);
-    void registerForInput(App* app);
+    int     getTopMostObject(Vec2f pos);
+    void    registerForInput(App* app);
     
-    bool hasPoint(Vec2f pnt){   return Rectf(gui_Position.x,gui_Position.y,gui_Position.x+gui_Width,gui_Position.y+gui_Height).contains(pnt);};
-    std::vector<TouchEvent::Touch> currentObjTouches;
+    bool    hasTouchPoint(Vec2f pnt){   return Rectf(gui_Position.x,gui_Position.y,gui_Position.x+gui_Width,gui_Position.y+gui_Height).contains(pnt);};
+   
+    std::vector<TouchEvent::Touch> gui_ObjectTouches;
 
 
 protected://Only children of this class have access to these variables, to allow access use "->" acessor(i.e make an accessor method)

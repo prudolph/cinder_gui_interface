@@ -46,10 +46,10 @@ void NavigationBarObject::addChild(GuiObject* o){
 
 void NavigationBarObject::touchesBeganHandler(){
     //Test the point if there is a child object that contains it        
-    for (TouchEvent::Touch curTouch : GuiObject::currentObjTouches ){
+    for (TouchEvent::Touch curTouch : GuiObject::gui_ObjectTouches ){
         //Test each Child if there are touch points in their container
         for(GuiObject *curObj: childObjects){
-            bool shouldSelect = (curObj->hasPoint(curTouch.getPos()) && !curObj->isSelected());
+            bool shouldSelect = (curObj->hasTouchPoint(curTouch.getPos()) && !curObj->isSelected());
             curObj->setSelected(shouldSelect?true:false);
         }
     }

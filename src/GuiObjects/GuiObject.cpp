@@ -203,73 +203,68 @@ void GuiObject::touchesBegan(app::TouchEvent event){
     for(TouchEvent::Touch touch : event.getTouches() ){
         
         //if this object contains the point and this is the object is not sitting below any other object;
-        if(hasPoint( touch.getPos()) &&  gui_Objects.at(getTopMostObject(touch.getPos())) == this && gui_AcceptTouch){
+        if(hasTouchPoint( touch.getPos()) &&  gui_Objects.at(getTopMostObject(touch.getPos())) == this && gui_AcceptTouch){
 
             // if this object is accepting touches add the touch to the obj's touch list
-            currentObjTouches.push_back(touch);
+            gui_ObjectTouches.push_back(touch);
             event.setHandled( true );
         }
     }
 
-    if(currentObjTouches.size()>0) touchesBeganHandler();
+    if(gui_ObjectTouches.size()>0) touchesBeganHandler();
 
 }
-void GuiObject::touchesMoved(app::TouchEvent event){
-    
-    //Vec2f centroid;
-    //int pntCnt=0;
-    
-        //Go Through all the touches in the event if the current touch is in the objects touch list then call the objects touches moved handler
-        for( vector<TouchEvent::Touch>::const_iterator touchIt = event.getTouches().begin(); touchIt != event.getTouches().end(); ++touchIt ) {
-            //If the touch object has current touches, check if they are in this event. if so move/reposition object based on the updated touches.
-            auto found=std::find_if (currentObjTouches.begin(),currentObjTouches.end(), FindTouch(*touchIt));
-            if(found!=currentObjTouches.end() ){//this touch id is touching this object
-                touchesMovedHandler();
-                event.setHandled();
 
-                // centroid += touchIt->getPos();
-               // pntCnt++;
-            }
-          
-        }
-    /*
-    if(this->oCanMove){
-        centroid/=pntCnt;//Get the center/average point of the touches
-        if(currentObjTouches.size()>0 && !isNaN(centroid) ){
-            oContainer.offsetCenterTo(centroid);
+
+void GuiObject::touchesMoved(app::TouchEvent event){
+   
+    //If the touch object has current touches, check if they are in this event. if so move/reposition object based on the updated touches.
+    bool hasTouchesThatMoved = false;
+    
+    for(TouchEvent::Touch touch : event.getTouches() ){
+
+        auto found=std::find_if (gui_ObjectTouches.begin(),gui_ObjectTouches.end(), FindTouch(touch));
+        if(found!=gui_ObjectTouches.end() ){
+            gui_ObjectTouches[found-gui_ObjectTouches.begin()] = touch;
+            hasTouchesThatMoved=true;
         }
     }
-    if(currentObjTouches.size()>0 && !oSelected)  setSelected(true);
-*/
-
-
+    
+    if(hasTouchesThatMoved)touchesMovedHandler();
+    
 }
+
 void GuiObject::touchesEnded(app::TouchEvent event){
+    bool hasTouchesThatEnded = false;
     
-    
-        for( vector<TouchEvent::Touch>::const_iterator touchIt = event.getTouches().begin(); touchIt != event.getTouches().end(); ++touchIt ) {
-            
-            //if current touches vector contains the iterators touch id, remove it from the list, since it is no longer touching the object. If there are no more touches in the current object touches set then the object is no longer selected
-
-            auto found=std::find_if (currentObjTouches.begin(),currentObjTouches.end(), FindTouch(*touchIt));
-            
-            //this touch id is touching this object
-            if(found!=currentObjTouches.end()){
-                currentObjTouches.erase(found);
-                touchesEndedHandler();
-            }
+    for(TouchEvent::Touch touch : event.getTouches() ){
+        //if current touches vector contains the iterators touch id, remove it from the list, since it is no longer touching the object. If there are no more touches in the current object touches set then the object is no longer selected
+        auto found=std::find_if (gui_ObjectTouches.begin(),gui_ObjectTouches.end(), FindTouch(touch));
+        
+        if(found!=gui_ObjectTouches.end()){
+            gui_ObjectTouches.erase(found);
+            hasTouchesThatEnded=true;
         }
+    }
+    
+    if(hasTouchesThatEnded)touchesEndedHandler();
 }
+
 
 void GuiObject::touchesBeganHandler(){
-    console()<<"Touch BEGAN Handler :: ABSTRACT FUNCTION - Must be OVERRIDDEN in subclass"<<endl;
-
+    #ifdef INPUT_DEBUG
+        console()<<"Touch BEGAN Handler :: ABSTRACT FUNCTION - Must be OVERRIDDEN in subclass"<<endl;
+    #endif
 }
 void GuiObject::touchesMovedHandler(){
-    console()<<"Touch MOVED Handler :: ABSTRACT FUNCTION - Must be OVERRIDDEN in subclass"<<endl;
+    #ifdef INPUT_DEBUG
+        console()<<"Touch MOVED Handler :: ABSTRACT FUNCTION - Must be OVERRIDDEN in subclass"<<endl;
+    #endif
 }
 void GuiObject::touchesEndedHandler(){
-    console()<<"Touch ENDED Handler :: ABSTRACT FUNCTION - Must be OVERRIDDEN in subclass"<<endl;
+    #ifdef INPUT_DEBUG
+        console()<<"Touch ENDED Handler :: ABSTRACT FUNCTION - Must be OVERRIDDEN in subclass"<<endl;
+    #endif
 }
 
 void GuiObject::setSelected(bool state){
@@ -286,7 +281,7 @@ void GuiObject::setHit(bool state){
 int GuiObject::getTopMostObject(Vec2f pos){
     //check if other buttons also get this touch
     for(int i =0;i<gui_Objects.size();i++){
-        if( gui_Objects.at(i)->hasPoint(pos)){
+        if( gui_Objects.at(i)->hasTouchPoint(pos)){
             return i;
         }
     }

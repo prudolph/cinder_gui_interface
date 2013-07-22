@@ -16,4 +16,9 @@ public:
     
     MovableObject();
 
+    virtual void touchesBeganHandler();
+    virtual void touchesMovedHandler();
+    virtual void touchesEndedHandler();
+    
+  	
 };

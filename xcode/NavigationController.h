@@ -6,7 +6,7 @@
 //
 //
 #pragma once
-#include "GuiObject.h"
+#include "MovableObject.h"
 #include "NavigationBarObject.h"
 
 
@@ -24,7 +24,7 @@ public:
     void update();
     void draw();
 
-    GuiObject       guiObject;
+    MovableObject       movableObject;
     NavigationBarObject navigationBarObject;
      
 };
