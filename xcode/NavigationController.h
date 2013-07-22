@@ -24,9 +24,7 @@ public:
     void update();
     void draw();
 
-protected:
     GuiObject       guiObject;
     NavigationBarObject navigationBarObject;
-private:
- 
+     
 };

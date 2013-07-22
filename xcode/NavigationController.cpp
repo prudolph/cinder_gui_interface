@@ -22,10 +22,10 @@ void NavigationController::setup(App *app){
     guiObject.registerForInput(app);
     guiObject.setContainerColor(ColorA(1.0f,0.0f,0.0f,1.0f));
     guiObject.setText("Base GuiObject 0");
-
+    
 #warning Figure out how to manage call backs
-    //guiObject.addCallBack(bind(buttonCallback,this,std::__1::placeholders::_1));
-
+   // guiObject.addCallBack(bind(buttonCallback,this,std::__1::placeholders::_1));
+   
 
     
     

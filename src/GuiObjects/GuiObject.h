@@ -36,7 +36,7 @@ public://anyone can gete access to this stuff with the "." accessor
     
     //Callback Functions
     signal<void(GuiObject *)>&	getSelectedSignal() { return gui_OnSelectSignal; }
-    void addCallBack(boost::function<void(GuiObject*)> fn){gui_OnSelectSignal.connect(fn);};
+    void addCallBack(std::function <void(GuiObject*)> fn){gui_OnSelectSignal.connect(fn);};
     
     //Hit Functions
     virtual void setHit(bool state);
@@ -89,7 +89,7 @@ public://anyone can gete access to this stuff with the "." accessor
 
 protected://Only children of this class have access to these variables, to allow access use "->" acessor(i.e make an accessor method)
 
-    
+    //This is a functor used to compare Touch objects based on id
     //Touch Comparator based on id of touch
     struct FindTouch {
         uint32_t id;
@@ -101,6 +101,8 @@ protected://Only children of this class have access to these variables, to allow
     
      
     
+    Vec2f       gui_Position;
+    float		gui_Width, gui_Height;
     
     //Text Objects
     std::string gui_Text,
@@ -118,24 +120,27 @@ protected://Only children of this class have access to these variables, to allow
          gui_CanResize,
          gui_IsEnabled,
          gui_IsVisible,
-         gui_IsAcceptingTouches,
+         gui_AcceptTouch,
          gui_Selected,
          gui_Hit,
-         gui_OverrideStaticDraw;//Enable this if the object should not be drawn by the static drawFunction;
+         gui_DefaultDraw;//Enable this if the object should not be drawn by the static drawFunction;
+ 
     ColorA gui_ContainerColor;
     
-    ci::app::WindowRef				gui_Window;
     
-
-    Vec2f       gui_Position;
-    float		gui_Width, gui_Height;
- 
+   
     
     //Mouse Event Callbacks
-    ci::signals::scoped_connection	gui_CbMouseDown, gui_CbMouseDrag,gui_CBMouseEnd;
+    ci::signals::scoped_connection	gui_CbMouseDown,
+                                    gui_CbMouseDrag,
+                                    gui_CbMouseEnd;
 
     //Touch Event Callbacks
-    ci::signals::scoped_connection	gui_CbTouchesBegan, gui_CbTouchesMoved,gui_CBTouchesEnd;
+    CallbackId                      gui_CbTouchBegan,
+                                    gui_CbTouchMoved,
+                                    gui_CbTouchEnd;
+    
+    
     ci::signals::scoped_connection	gui_BeganSignal, gui_HitEndSignal;
 
     //These functions will be overridden to decide if the object is selected, should move, etc..
@@ -160,7 +165,7 @@ private://No one other than this class can access theses variables
                              gui_OnHitSignal;
     
     static std::vector<TouchEvent::Touch> gui_MouseTouches;
-    static vector<GuiObject*>             gui_ObjectOrderList;
+    static vector<GuiObject*>             gui_Objects;
 };
 
 

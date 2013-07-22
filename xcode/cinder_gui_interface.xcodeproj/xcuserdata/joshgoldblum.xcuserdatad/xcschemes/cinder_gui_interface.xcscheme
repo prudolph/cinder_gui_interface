@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8D1107260486CEB800E47090"
-               BuildableName = "cinder_gui_interface.app"
+               BuildableName = "InterfaceApp.app"
                BlueprintName = "cinder_gui_interface"
                ReferencedContainer = "container:cinder_gui_interface.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8D1107260486CEB800E47090"
-            BuildableName = "cinder_gui_interface.app"
+            BuildableName = "InterfaceApp.app"
             BlueprintName = "cinder_gui_interface"
             ReferencedContainer = "container:cinder_gui_interface.xcodeproj">
          </BuildableReference>
@@ -52,7 +52,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8D1107260486CEB800E47090"
-            BuildableName = "cinder_gui_interface.app"
+            BuildableName = "InterfaceApp.app"
             BlueprintName = "cinder_gui_interface"
             ReferencedContainer = "container:cinder_gui_interface.xcodeproj">
          </BuildableReference>
@@ -70,7 +70,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8D1107260486CEB800E47090"
-            BuildableName = "cinder_gui_interface.app"
+            BuildableName = "InterfaceApp.app"
             BlueprintName = "cinder_gui_interface"
             ReferencedContainer = "container:cinder_gui_interface.xcodeproj">
          </BuildableReference>

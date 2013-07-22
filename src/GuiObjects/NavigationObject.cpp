@@ -12,7 +12,7 @@ using namespace std;
 NavigationObject::NavigationObject():GuiObject(){
 
     gui_CanMove=false;
-    gui_OverrideStaticDraw=true;
+    gui_DefaultDraw=false;
     
   }
 

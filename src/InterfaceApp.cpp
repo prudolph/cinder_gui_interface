@@ -36,7 +36,7 @@ void InterfaceApp::setup()
 {
    
     navigationController.setup(this);
-
+    navigationController.guiObject.addCallBack( bind(&InterfaceApp::buttonCallback,this,std::__1::placeholders::_1));
     sampleContentArea =      Rectf(100,100,getWindowWidth()-50,getWindowHeight()-100);
     sampleContentAreaColor = ColorA(1.0f, 1.0f, 1.0f, 0.5f);
 
@@ -66,7 +66,4 @@ void InterfaceApp::buttonCallback(GuiObject *object){
     console()<<"BUTTON  "<< object->getText()<<"Has been selected"<<endl;
     sampleContentAreaColor =object->getContainerColor()/2;
 }
-
-
-
 CINDER_APP_NATIVE( InterfaceApp, RendererGl )
