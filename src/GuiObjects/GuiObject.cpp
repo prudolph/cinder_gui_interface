@@ -6,8 +6,6 @@
 //
 //
 
-
-
 #include "GuiObject.h"
 #include "cinder/gl/gl.h"
 #include "boost/lexical_cast.hpp"
@@ -21,33 +19,29 @@ vector<GuiObject*>GuiObject::gui_Objects = vector<GuiObject*>();
 vector <TouchEvent::Touch> GuiObject::gui_MouseTouches = vector<TouchEvent::Touch>();
 Client GuiObject::gui_Tuio;
 
+
 GuiObject::GuiObject(){
 
     //Set size and Position
     gui_Position = Vec2f(0,0);
-    gui_Width=gui_Height=0.0f;
+    gui_Width=0.0f;
+    gui_Height=0.0f;
 
     //Set background color
     gui_ContainerColor = ColorA(1.0f,0.0f,0.0f,1.0f);
     
     //Set Base Attributes
     gui_CanMove     = true;
-  
     gui_AcceptTouch = true;
-    
-
     gui_IsVisible   = true;
-
     gui_DefaultDraw = true;
     gui_Selected    = false;
 
-    
     gui_TextFont="Arial";
 
     //Add this object to the static list of objects
     gui_Objects.push_back(this);
 }
-
 
 
 void GuiObject::draw(){
@@ -91,23 +85,20 @@ void GuiObject::drawObject(){
         gl::drawSolidRect(getRect());
     gl::disableAlphaBlending();
     
-    
     //draw gui object text
-
-    gl::enableAlphaBlending();
-    gl::color(0,1,0);
-  
-    Vec2f textboxPos= Vec2f((getRect().getCenter().x-gui_TextTexture.getWidth()/2),
-                            (getRect().getCenter().y-gui_TextTexture.getHeight()/2));
-   
-    gl::draw(gui_TextTexture,textboxPos);
-    gl::disableAlphaBlending();
-
-    
+    if(gui_TextTexture){
+        gl::enableAlphaBlending();
+        gl::color(0,1,0);
+      
+        Vec2f textboxPos= Vec2f((getRect().getCenter().x-gui_TextTexture.getWidth()/2),
+                                (getRect().getCenter().y-gui_TextTexture.getHeight()/2));
+       
+        gl::draw(gui_TextTexture,textboxPos);
+        gl::disableAlphaBlending();
+    }
 }
 
-void GuiObject::registerForInput(App* app){
-    app::WindowRef window = app->getWindow();
+void GuiObject::registerForInput(app::WindowRef window){
     
     if(!gui_Tuio.isConnected())  gui_Tuio.connect();
 
@@ -123,10 +114,11 @@ void GuiObject::registerForInput(App* app){
     
     
 #ifdef INPUT_DEBUG
-    console()<<"Registered Input callbacks"<<endl;
+    //console()<<"Registered Input callbacks"<<endl;
 #endif
 
 }
+
 
 #pragma mark Input Functions -
 #pragma mark Mouse Functions
@@ -144,8 +136,8 @@ void GuiObject::onMouseBegan(MouseEvent &e){
     else          console()<<"Mouse Began @ "<< e.getX()<<","<< e.getY() <<endl;
      */
 #endif
-
 }
+
 
 void GuiObject::onMouseMoved(MouseEvent &e){
 
@@ -163,6 +155,7 @@ void GuiObject::onMouseMoved(MouseEvent &e){
 #endif
 }
 
+
 void GuiObject::onMouseEnded(MouseEvent &e){
   
     TouchEvent te= mouse2Touch(e);
@@ -170,14 +163,10 @@ void GuiObject::onMouseEnded(MouseEvent &e){
     gui_MouseTouches.clear();
     
 #ifdef INPUT_DEBUG
-    console()<<"Mouse Ended "<<endl;
+    //console()<<"Mouse Ended "<<endl;
 #endif
-
 }
 
-vector<TouchEvent::Touch> GuiObject::getMouseTouches(){
-    return gui_MouseTouches;
-}
 TouchEvent GuiObject::mouse2Touch(MouseEvent e){
     app::TouchEvent::Touch t = app::TouchEvent::Touch( e.getPos(), Vec2f(), -1, app::getElapsedSeconds() , nullptr );
     vector<app::TouchEvent::Touch> tVector;
@@ -186,9 +175,6 @@ TouchEvent GuiObject::mouse2Touch(MouseEvent e){
     
     return te;
 }
-
-
-
 
 #pragma mark Touch Functions
 void GuiObject::touchesBegan(app::TouchEvent event){
@@ -206,7 +192,6 @@ void GuiObject::touchesBegan(app::TouchEvent event){
     }
 
     if(gui_ObjectTouches.size()>0) touchesBeganHandler();
-
 }
 
 
@@ -216,7 +201,6 @@ void GuiObject::touchesMoved(app::TouchEvent event){
     bool hasTouchesThatMoved = false;
     
     for(TouchEvent::Touch touch : event.getTouches() ){
-
         auto found=std::find_if (gui_ObjectTouches.begin(),gui_ObjectTouches.end(), FindTouch(touch));
         if(found!=gui_ObjectTouches.end() ){
             gui_ObjectTouches[found-gui_ObjectTouches.begin()] = touch;
@@ -225,8 +209,8 @@ void GuiObject::touchesMoved(app::TouchEvent event){
     }
     
     if(hasTouchesThatMoved)touchesMovedHandler();
-    
 }
+
 
 void GuiObject::touchesEnded(app::TouchEvent event){
     bool hasTouchesThatEnded = false;
@@ -240,7 +224,6 @@ void GuiObject::touchesEnded(app::TouchEvent event){
             hasTouchesThatEnded=true;
         }
     }
-    
     if(hasTouchesThatEnded)touchesEndedHandler();
 }
 
@@ -262,7 +245,7 @@ void GuiObject::touchesEndedHandler(){
 }
 
 void GuiObject::setSelected(bool state){
-    gui_Selected  =state;
+    gui_Selected = state;
     if(gui_Selected) gui_OnSelectSignal(this);
 }
 
@@ -278,17 +261,6 @@ int GuiObject::getTopMostObject(Vec2f pos){
 }
 
 
-// Passing in 0,0 would result in i.e. 500,500
-Vec2f GuiObject::convertToObjectSpace(Vec2f pos){
-    return Vec2f(getPosition().x+pos.x,getPosition().y+pos.y);
-}
-
-Vec2f GuiObject::convertToWindowSpace(Vec2f pos){
-    return Vec2f(-1,-1);
-}
-
-
-
 #pragma mark - Text functions
 void GuiObject::setText(string s){
 
@@ -297,20 +269,24 @@ void GuiObject::setText(string s){
 #endif
 
     gui_Text = s;
-    gui_TextBox = TextBox()
+    if(s.length()>0){
+
+        gui_TextBox = TextBox()
                             .alignment( TextBox::CENTER )
                             .font( Font(gui_TextFont,18) )
                             .size( Vec2f(getWidth(), TextBox::GROW) )
                             .text( gui_Text );
     
-    gui_TextBox.setColor( ColorA( 0.0f, 0.0f, 0.0f, 1.0f ) );
-	gui_TextBox.setBackgroundColor( ColorA( 0, 0, 0, 0.0f ) );
+        gui_TextBox.setColor( ColorA( 0.0f, 0.0f, 0.0f, 1.0f ) );
+        gui_TextBox.setBackgroundColor( ColorA( 0, 0, 0, 0.0f ) );
     
-	gui_TextTexture = gl::Texture( gui_TextBox.render() );
+        gui_TextTexture = gl::Texture( gui_TextBox.render() );
+    }
 }
 
 void GuiObject::updateTextBox(){
-    
-    gui_TextBox.setText(gui_Text );
-    gui_TextTexture = gl::Texture( gui_TextBox.render() );
+    if(gui_Text.length()>0){
+        gui_TextBox.setText(gui_Text );
+        gui_TextTexture = gl::Texture( gui_TextBox.render() );
+    }
 }

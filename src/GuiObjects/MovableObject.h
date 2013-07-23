@@ -14,11 +14,10 @@
 class MovableObject: public GuiObject{
 public:
     
-    MovableObject();
+    MovableObject(){};
+    void setup(app::WindowRef window, Vec2f pos,Vec2f size,string text="");
 
     virtual void touchesBeganHandler();
     virtual void touchesMovedHandler();
     virtual void touchesEndedHandler();
-    
-  	
 };

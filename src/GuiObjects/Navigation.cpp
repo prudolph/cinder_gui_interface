@@ -1,14 +1,14 @@
 //
-//  NavigationBarObject.cpp
+//  Navigation.cpp
 //  guiObjects
 //
 //  Created by Paul Rudolph on 7/10/13.
 
 
-#include "NavigationBarObject.h"
+#include "Navigation.h"
 
-NavigationBarObject::NavigationBarObject(){
-
+Navigation::Navigation(){
+    
     buttonSpacing=5.0f;
     nextObjectPosition=Vec2f(0.0,0.0f);
     gui_ContainerColor= ColorA(0.0f,1.0f,0.0f,0.0f);
@@ -16,17 +16,15 @@ NavigationBarObject::NavigationBarObject(){
 }
 
 
-void NavigationBarObject:: setup(App *app,Vec2f pos, float width, float height){
-    
-    registerForInput(app);
+void Navigation:: setup(app::WindowRef window,Vec2f pos, Vec2f size){
+    registerForInput(window);
     setPosition(pos);
-    setWidth(width);
-    setHeight(height);
+    setSize(size);
 }
 
 
 //This overrides the default draw function. This allows custom drawing rules to be set
-void NavigationBarObject::drawObject(){
+void Navigation::drawObject(){
     
     gl::color(gui_ContainerColor);
     gl::drawSolidRect(getRect());
@@ -36,18 +34,17 @@ void NavigationBarObject::drawObject(){
 }
 
 
-void NavigationBarObject::addChild(GuiObject* o){
+void Navigation::addChild(GuiObject* o){
     //position button with in the navigation bar
+
     o->setPosition(convertToObjectSpace(nextObjectPosition));
     nextObjectPosition.x+= o->getWidth()+buttonSpacing;
 
-//    //Set callback for selected signal
-//    o->getSelectedSignal().connect( bind(& NavigationBarObject::onObjectSelect,this,std::__1::placeholders::_1));
     childObjects.push_back(o);
 }
 
 
-void NavigationBarObject::touchesBeganHandler(){
+void Navigation::touchesBeganHandler(){
     //Test the point if there is a child object that contains it        
     for (TouchEvent::Touch curTouch : GuiObject::gui_ObjectTouches ){
         //Test each Child if there are touch points in their container
@@ -62,14 +59,30 @@ void NavigationBarObject::touchesBeganHandler(){
 }
 
 //sample Callback function
-void NavigationBarObject::onObjectSelect(GuiObject* object){
+void Navigation::onObjectSelect(GuiObject* object){
     //Add additional Select functionality here ex:button tweening, touch delays
-    /*
-     
-     */
     
     //Fire off an event to any outside objects that are listening for select event.
     getSelectedSignal() (object);
-    
 }
 
+
+void Navigation::setPosition( float x, float y ){
+    gui_Position = Vec2f(x,y);
+    setChildObjectPositions();
+}
+
+
+void Navigation::setPosition( Vec2f pt ){
+    gui_Position = pt;
+    setChildObjectPositions();
+}
+
+
+void Navigation::setChildObjectPositions(){
+        nextObjectPosition=Vec2f(0.0,0.0f);
+    for(GuiObject *cObj: childObjects){
+        cObj->setPosition(convertToObjectSpace(nextObjectPosition));
+        nextObjectPosition.x+= cObj->getWidth()+buttonSpacing;
+    }
+}

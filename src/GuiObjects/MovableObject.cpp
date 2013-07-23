@@ -7,18 +7,21 @@
 //
 #include "MovableObject.h"
 
-MovableObject:: MovableObject(){
-
-    console()<<"CREATED MOVEABLE OBJECT"<<endl;
-    //Set background color
-    gui_ContainerColor = ColorA(0.0f,1.0f,0.0f,1.0f);
-    
+void MovableObject::setup(app::WindowRef window, Vec2f pos,Vec2f size,string text){
+    registerForInput(window);
+    setPosition(Vec2f(400,400));
+    setSize(size);
+    setText(text);
 }
+
 
 void MovableObject::touchesBeganHandler(){
+#ifdef INPUT_DEBUG
     console()<<"Moveable Touch BEGAN Handler "<<endl;
-   if(gui_ObjectTouches.size()>0) setSelected(true);
+#endif
+    if(gui_ObjectTouches.size()>0) setSelected(true);
 }
+
 
 void MovableObject::touchesMovedHandler(){
     
@@ -31,15 +34,13 @@ void MovableObject::touchesMovedHandler(){
         pntCnt++;
     }
     
-     if(gui_CanMove){
-    
-         centroid/=pntCnt;//Get the center/average point of the touches
-         if (!isNaN(centroid) ){
-        //check that the object is not going out of the window
-             setPosition(centroid);
-   
-         }
-     }
+    if(gui_CanMove){
+        centroid/=pntCnt;//Get the center/average point of the touches
+        if (!isNaN(centroid) ){
+            //check that the object is not going out of the window
+            setPosition(centroid);
+        }
+    }
 }
 
 
