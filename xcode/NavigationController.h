@@ -23,8 +23,17 @@ public:
     void setup(App *app);
     void update();
     void draw();
-
+    void navigationCallback(GuiObject* object);
+    
+    
     MovableObject       movableObject;
     NavigationBarObject navigationBarObject;
-     
+    
+    
+    
+    Rectf  navigationContent;
+    ColorA navigationContentColor;
+    gl::Texture navTextTexture;
+    TextBox navTextBox;
+    string      navText;
 };

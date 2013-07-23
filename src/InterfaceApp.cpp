@@ -15,12 +15,9 @@ public:
 	void update();
 	void draw();
     
-  void buttonCallback(GuiObject *object );
    
     NavigationController navigationController;
-    
-    Rectf  sampleContentArea;
-    ColorA sampleContentAreaColor;
+
 };
 
 
@@ -36,9 +33,6 @@ void InterfaceApp::setup()
 {
    
     navigationController.setup(this);
-    //navigationController.addCallBack( bind(&InterfaceApp::buttonCallback,this,std::__1::placeholders::_1));
-    sampleContentArea =      Rectf(100,100,getWindowWidth()-50,getWindowHeight()-100);
-    sampleContentAreaColor = ColorA(1.0f, 1.0f, 1.0f, 0.5f);
 
 }
 
@@ -50,20 +44,14 @@ void InterfaceApp::draw()
 {
 	// clear out the window with black
 	gl::clear( Color( 0, 0, 0 ) );
-    
-    
-    //draw the content area
-    gl::color( sampleContentAreaColor );
-    gl::drawSolidRect( sampleContentArea);
+
+    //Draw the extra components of the navigation controller
+    navigationController.draw();
     
     //This will draw all Guiobject subclases if that object is visible
     GuiObject::draw();
+
     
 }
 
-
-void InterfaceApp::buttonCallback(GuiObject *object){
-    console()<<"BUTTON  "<< object->getText()<<"Has been selected"<<endl;
-    sampleContentAreaColor =object->getContainerColor()/2;
-}
 CINDER_APP_NATIVE( InterfaceApp, RendererGl )

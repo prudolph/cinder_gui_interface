@@ -9,7 +9,7 @@
 #include "NavigationObject.h"
 
 using namespace std;
-NavigationObject::NavigationObject():GuiObject(){
+    NavigationObject::NavigationObject():GuiObject(){
 
     gui_CanMove=false;
     gui_DefaultDraw=false;

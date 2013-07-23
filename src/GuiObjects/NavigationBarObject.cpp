@@ -37,9 +37,12 @@ void NavigationBarObject::drawObject(){
 
 
 void NavigationBarObject::addChild(GuiObject* o){
-    
+    //position button with in the navigation bar
     o->setPosition(convertToObjectSpace(nextObjectPosition));
     nextObjectPosition.x+= o->getWidth()+buttonSpacing;
+
+//    //Set callback for selected signal
+//    o->getSelectedSignal().connect( bind(& NavigationBarObject::onObjectSelect,this,std::__1::placeholders::_1));
     childObjects.push_back(o);
 }
 
@@ -50,7 +53,23 @@ void NavigationBarObject::touchesBeganHandler(){
         //Test each Child if there are touch points in their container
         for(GuiObject *curObj: childObjects){
             bool shouldSelect = (curObj->hasTouchPoint(curTouch.getPos()) && !curObj->isSelected());
-            curObj->setSelected(shouldSelect?true:false);
+            if(shouldSelect){
+                curObj->setSelected(true);
+                onObjectSelect(curObj);
+            }else curObj->setSelected(false);
         }
     }
 }
+
+//sample Callback function
+void NavigationBarObject::onObjectSelect(GuiObject* object){
+    //Add additional Select functionality here ex:button tweening, touch delays
+    /*
+     
+     */
+    
+    //Fire off an event to any outside objects that are listening for select event.
+    getSelectedSignal() (object);
+    
+}
+

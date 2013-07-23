@@ -21,7 +21,7 @@ protected:
     void touchesBeganHandler();
     void touchesMovedHandler(){};
     void touchesEndedHandler(){};
-    
+    void onObjectSelect(GuiObject* object);
     vector<GuiObject*> childObjects;
     Vec2f nextObjectPosition;
     float buttonSpacing;   
