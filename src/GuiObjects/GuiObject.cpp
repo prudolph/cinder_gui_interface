@@ -32,16 +32,15 @@ GuiObject::GuiObject(){
     
     //Set Base Attributes
     gui_CanMove     = true;
-    gui_CanRotate   = true;
-    gui_CanResize   = true;
+  
     gui_AcceptTouch = true;
     
-    gui_IsEnabled   = true;
+
     gui_IsVisible   = true;
 
     gui_DefaultDraw = true;
     gui_Selected    = false;
-    gui_Hit         = false;
+
     
     gui_TextFont="Arial";
 
@@ -85,12 +84,7 @@ void GuiObject::drawObject(){
         gl::lineWidth(8.0f);
         gl::drawStrokedRect(getRect());
     }
-    
-    if(isHit()){
-        gl::color(0.0f,0.0f,1.0f);
-        gl::lineWidth(4.0f);
-        gl::drawStrokedRect(getRect());
-    }
+
     
     gl::enableAlphaBlending();
         gl::color(gui_ContainerColor);
@@ -270,11 +264,6 @@ void GuiObject::touchesEndedHandler(){
 void GuiObject::setSelected(bool state){
     gui_Selected  =state;
     if(gui_Selected) gui_OnSelectSignal(this);
-}
-
-void GuiObject::setHit(bool state){
-    gui_Hit = state;
-    if(gui_Hit) gui_OnHitSignal(this);
 }
 
 

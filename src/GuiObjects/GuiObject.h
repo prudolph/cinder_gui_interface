@@ -25,6 +25,7 @@ class GuiObject {
 public://anyone can gete access to this stuff with the "." accessor
     
     GuiObject();
+
    
     static  void draw(); //This can be called from anywhere and draws all the ojects
     virtual void drawObject();
@@ -32,17 +33,15 @@ public://anyone can gete access to this stuff with the "." accessor
    
    //Selected Functions
     virtual void setSelected(bool state);
-    bool isSelected(){return gui_Selected;};
+            bool isSelected(){return gui_Selected;};
     
     //Callback Functions
     signal<void(GuiObject *)>&	getSelectedSignal() { return gui_OnSelectSignal; }
     void addCallBack(std::function <void(GuiObject*)> fn){gui_OnSelectSignal.connect(fn);};
-    
-    //Hit Functions
-    virtual void setHit(bool state);
-    bool isHit(){return gui_Hit;}
+
 
     //Positioning and size Functions getters and setters
+    
     virtual void        setContainer(Vec2f pos, float w , float h ){ gui_Position = pos; gui_Width =w; gui_Height=h; }
 	virtual Vec2f       getPosition() const { return gui_Position; }
 	virtual void		setPosition( float x, float y ){ gui_Position = Vec2f(x, y);}
@@ -118,13 +117,9 @@ protected://Only children of this class have access to these variables, to allow
     
     
     bool gui_CanMove,
-         gui_CanRotate,
-         gui_CanResize,
-         gui_IsEnabled,
          gui_IsVisible,
          gui_AcceptTouch,
          gui_Selected,
-         gui_Hit,
          gui_DefaultDraw;//Enable this if the object should not be drawn by the static drawFunction;
  
     ColorA gui_ContainerColor;
